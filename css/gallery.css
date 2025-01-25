@@ -1,0 +1,455 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+body {
+  font-family: Verdana, sans-serif; 
+  margin:0;
+
+}
+
+h1{
+  margin-top: -1rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.mySlides {
+  display: none
+  
+}
+img {
+  vertical-align: middle;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  height: auto; 
+  max-height: 40vw;
+  margin: 1% 1%;
+  transition: .3s ease-in-out; 
+  
+
+}
+
+.fullscreen-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  width: 97vw !important; 
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* Slideshow container */
+.slideshow-container {
+  
+  align-items: center;
+  height: auto;
+  max-height: 500px;
+  max-width: 900px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center top;
+  
+
+}
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 60%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+margin-right: 1rem;
+}
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+
+
+}
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+.dot{
+height: 10px;
+width: 10px;
+}
+@media only screen and (max-width: 500px) {
+.prev, .next,.text {font-size: 14px}
+}
+}
+
+/* ####################### project photo ########################*/
+.hello {
+  opacity: 1 !important;
+}
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.full .content {
+  background-color: rgba(0,0,0,0.75) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.byebye {
+  opacity: 0;
+}
+.byebye:hover {
+  transform: scale(0.2) !important;
+}
+.gallery {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 8px;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+}
+.gallery img:hover {
+  box-shadow: 0 0 32px #333;
+}
+.gallery .content {
+  padding: 4px;
+}
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+
+.gallery-info p {
+  position: absolute; /* Make the paragraph element absolute */
+  opacity: 0; /* Initially hide the title */
+  transition: opacity 0.2s ease; /* Smooth transition on hover */
+  bottom: 0; /* Position at the bottom of the image */
+  left: 0; /* Position at the left of the image (adjust as needed) */
+  width: 100%; /* Span the full width of the image */
+  padding: 15px;
+  text-align: center; /* Center align the text */
+  color: #fff;
+  font-weight: 800;
+  font-size: large;
+  padding-bottom: 5rem;
+  background-color: transparent; /* Semi-transparent background */
+  color: rgb(230, 226, 223); /* Text color for better contrast */
+  text-align: center; /* Center align the text */
+}
+
+.gallery-item:hover .gallery-info p {
+  opacity: 1; /* Show the title on hover */
+}
+
+/* ####################### Event photos #################################*/
+
+
+
+p {
+  font-size: .875em;
+  line-height: 1.4;
+  margin: 0 0 1.5em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+
+.container,
+.content {
+  margin: auto;
+}
+.container {
+  width: 94.02985075%;
+  max-width: 1260px;
+  padding: 0 2.25em 4em;
+  display:block;
+}
+.main-header {
+  text-align: center;
+  padding: 2.8em 0 3.8em;
+}
+.cube-container {
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto 4.5em;
+}
+/* ---- Page Elements ---- */
+
+.name {
+  font-size: 1.65em;
+  font-weight: 800;
+  margin: 0 0 1.5em;
+  line-height: 1;
+}
+.name span {
+  font-weight: 300;
+  margin-left: -7px;
+}
+.logo {
+  width: 45px;
+  margin-bottom: .4em;
+  cursor: pointer;
+}
+
+/* ---- Photo Overlay ---- */
+
+.photo-desc {
+  font-size: .85em;
+  color: #fff;
+  padding: 1.1em 1em 0;
+  background: #da6821;
+}
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .cube-container {
+    float: left;
+    margin-left: 16.6%;
+  }
+}
+@media (min-width: 1025px) {
+  .cube-container:first-child {
+    margin-left: 0;
+  }
+  .cube-container:last-child{
+    float: right;
+  }
+  .content {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+
+
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.cube-container {
+  box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+  perspective: 800px;
+}
+
+.photo-cube {
+transition: transform 2s ease-in-out; 
+  width: 220px;
+  height: 200px;
+  transform-style: preserve-3d;
+}
+
+.photo-cube:hover {
+transform: rotateY(-270deg);
+}
+
+.front,
+.back,
+.left,
+.right {
+width: 100%;
+height: 100%;
+display: block;
+position: absolute;
+}
+
+.front {
+transform: translate3d(0,0,110px);
+}
+
+.back {
+transform: translateZ(-110px) rotateY(270deg);
+  transform-origin: center left;
+}
+
+.left {
+transform: rotateY(-270deg) translate3d(110px, 0, 0);
+  transform-origin: top right;
+}
+
+.right {
+transform: translateZ(-110px) rotateY(180deg);
+ }
+ 

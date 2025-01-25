@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.nav_container{
+
+    padding-left: 5rem;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem ;
+    padding-right: 5rem;
+}
+/* Contact Page Layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 60px;
+}
+
+/* Map Container */
+.map-container {
+    flex: 2;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Form Container */
+.form-container {
+    flex: 1;
+    background-color:rgb(40, 40, 39);
+    color: rgb(241, 103, 28);
+    padding: 40px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Form Styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background-color: rgb(241, 103, 28);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #db5123;
+}
+
+#status {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .map-container {
+        flex: 1;
+        height: 300px;
+        width: 100%;
+    }
+
+    .form-container {
+        flex: 1;
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+    }
+}

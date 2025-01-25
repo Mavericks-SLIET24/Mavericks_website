@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/BG-img.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+/* prject section */
+
+.Projects_Section{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.sub_heading{
+    padding: 2rem;
+    cursor: pointer;
+}
+.sub_heading:hover{
+    color: rgb(243, 105, 56);
+}
+.sub_heading1{
+    margin-top: -10rem;
+    padding: 2rem;
+    cursor: pointer;
+}
+.sub_heading1:hover{
+    color: rgb(243, 105, 56);
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+    flex-wrap: wrap;
+
+}
+
+.project_section{
+    background-color: rgb(23, 22, 22);
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.project_section:hover{
+    transition: all .4s ease-in-out;
+    transform: scale(1.04);
+    cursor: pointer;
+    border: 1px solid white;
+    border: 1px solid  rgb(50, 46, 41);
+    
+}
+.project_info{
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+
+}
+.project_info{
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+.project_image{
+  max-width: 400px; 
+  max-height: 350px; 
+  overflow: hidden;
+  object-fit: cover;
+  
+}
+h4{
+    padding-bottom: 1rem;
+}
